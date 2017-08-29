@@ -1,0 +1,31 @@
+<h1>Список водителей</h1>
+
+<table class="table">
+  <thread>
+    <tr>
+      <th>#</th>
+      <th>Имя</th>
+      <th>Отчество</th>
+      <th>Фамилия</th>
+      <th>Статус</th>
+      <th>Дата рождения</th>
+      <th>Категория прав</th>
+      <th>Дата получения прав</th>
+    </tr>
+  </thread>
+<% @drivers.each do |driver| %>
+  <tbody>
+    <tr>
+      <td><%= driver.id %></td>
+      <td><%= driver.first_name %></td>
+      <td><%= driver.middle_name %></td>
+      <td><%= driver.last_name %></td>
+      <td><%= driver.active %></td>
+      <td><%= driver.birthday %></td>
+      <td><%= driver.category_rights %></td>
+      <td><%= driver.data_issue_rights %></td>
+      <td><%= link_to "Edit", edit_driver_path(driver), class: "btn btn-warning" %></td>
+    </tr>
+  </tbody>
+  <% end%>
+</table>

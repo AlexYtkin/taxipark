@@ -1,0 +1,13 @@
+<div class="container-fluid">
+<h1>Редактировать данные о водителе</h1>
+<% simple_form_for @driver do  |d| %>
+<p><%= d.input :first_name %></p>
+<p><%= d.input :middle_name %></p>
+<p><%= d.input :last_name %></p>
+<p><%= d.input :active %></p>
+<p><%= d.input :birthday %></p>
+<p><%= d.input :category_rights %></p>
+<p><%= d.input :data_issue_rights %></p>
+<p><%= d.button :submit, class: "btn btn-primary" %></p>
+<% end %
+</div>
