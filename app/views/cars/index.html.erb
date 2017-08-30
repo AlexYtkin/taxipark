@@ -1,0 +1,31 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Модель</th>
+      <th>Номер</th>
+      <th>Год выпуск</th>
+      <th>Индексный номер</th>
+      <th>Мощность двигателя</th>
+      <th>Кузов</th>
+      <th>Цвет</th>
+      <th></th>
+    </tr>
+  </thead>
+  <% @cars.each do |car| %>
+  <tbody>
+    <tr>
+      <td><%= car.model %></td>
+      <td><%= car.number_car %></td>
+      <td><%= car.year_issue %></td>
+      <td><%= car.index_number %></td>
+      <td><%= car.engine_power %></td>
+      <td><%= car.carcase %></td>
+      <td><%= car.color %></td>
+      <td><%= car.weight %></td>
+      <td><%= link_to "Show", car_path(car), class: "btn btn-info" %></td>
+      <td><%= link_to "Edit", edit_car_path(car), class: "btn btn-warning" %></td>
+      <td><%= link_to "Delete", car_path(car), method: :delete,  class: "btn btn-danger", data: {confirm: "Вы действительно хотите удалить?"} %></td>
+    </tr>
+  </tbody>
+  <% end %>
+<table>

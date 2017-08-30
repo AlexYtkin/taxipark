@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <h1>Редактировать информацию об автомобиле</h1>
+  <%= simple_form_for @car do |c| %>
+  <%= c.input :model %>
+  <%= c.input :number_car %>
+  <%= c.input :year_issue %>
+  <%= c.input :index_number %>
+  <%= c.input :engine_power %>
+  <%= c.input :carcase %>
+  <%= c.input :color %>
+  <%= c.input :weight %>
+  <%= c.button :submit, class: "btn btn-primary" %>
+  <% end %>
+</div>

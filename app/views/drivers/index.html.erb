@@ -24,8 +24,9 @@
       <td><%= driver.birthday %></td>
       <td><%= driver.category_rights %></td>
       <td><%= driver.data_issue_rights %></td>
+      <td><%= driver.cars %></td>
+      <td><%= link_to "Show", driver_path(driver), class: "btn btn-info" %></td>
       <td><%= link_to "Edit", edit_driver_path(driver), class: "btn btn-warning" %></td>
-    </tr>
-  </tbody>
+      <td><%= link_to "Delet e", driver_path(driver), method: :delete,  class: "btn btn-danger", data: {confirm: "Вы действительно хотите удалить?"} %></td>
   <% end%>
 </table>
